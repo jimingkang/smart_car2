@@ -83,6 +83,15 @@ def motor1(x):
 	elif x == 'False':
 		GPIO.output(Motor1_A, GPIO.HIGH)
 		GPIO.output(Motor1_B, GPIO.LOW)
+
+def left():
+	motor0(forward0)
+	motor1(backward0)
+
+def right():
+	motor0(backward0)
+	motor1(forward0)
+
 def forward():
 	motor0(forward0)
 	motor1(forward1)

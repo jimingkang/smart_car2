@@ -109,16 +109,16 @@ def move(twist):
 	global cmd, speed
 	if float(twist.linear.x)>0:
 		print("in x>0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
-		speedtmp=speed*float(twist.angular.x)		
+		speedtmp=abs(speed*float(twist.angular.x))
 		motor.setSpeed(int(speedtmp))
 		print(speedtmp)
-		motor.forward()
+		motor.left()
 	elif float(twist.linear.x)<0:
 		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
-		speedtmp=speed*float(twist.angular.x)		
+		speedtmp=abs(speed*float(twist.angular.x))
 		motor.setSpeed(int(speedtmp))
 		print(speedtmp)
-		motor.backward()
+		motor.right()
 	else:
 		motor.stop()
 def CommandCallback(commandMessage):
