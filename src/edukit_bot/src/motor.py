@@ -30,7 +30,10 @@ def setSpeed(speed):
 	print 'speed is: ', speed
 	pwm.write(EN_M0, 0, speed)
 	pwm.write(EN_M1, 0, speed)
-
+def setSpeedByPin(EN_Motor_pin,speed):
+	speed *= 40
+	print 'speed is: ', speed
+	pwm.write(EN_Motor_pin, 0, speed)
 def setup(busnum=None):
 	global forward0, forward1, backward1, backward0
 	global pwm
@@ -86,13 +89,15 @@ def motor1(x):
 
 def left():
 	print("forward0="+forward0+",backward0="+backward0)
+	setSpeedByPin(EN_M1, 0)
 	motor0(forward0)
-	motor1(backward0)
+
 
 def right():
 	print("forward0=" + forward0 + ",backward0=" + backward0)
-	motor0(backward0)
+	setSpeedByPin(EN_M0, 0)
 	motor1(forward0)
+
 
 def forward():
 	motor0(forward0)
