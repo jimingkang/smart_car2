@@ -85,10 +85,12 @@ def motor1(x):
 		GPIO.output(Motor1_B, GPIO.LOW)
 
 def left():
+	print("forward0="+forward0+",backward0="+backward0)
 	motor0(forward0)
 	motor1(backward0)
 
 def right():
+	print("forward0=" + forward0 + ",backward0=" + backward0)
 	motor0(backward0)
 	motor1(forward0)
 
