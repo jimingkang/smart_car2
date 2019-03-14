@@ -112,13 +112,13 @@ def move(twist):
 		speedtmp=abs(speed*float(twist.angular.x))
 		motor.setSpeed(int(speedtmp))
 		print(speedtmp)
-		motor.left()
+		motor.forward()
 	elif float(twist.linear.x)<0:
 		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 		speedtmp=abs(speed*float(twist.angular.x))
 		motor.setSpeed(int(speedtmp))
 		print(speedtmp)
-		motor.right()
+		motor.backward()
 	else:
 		motor.stop()
 def CommandCallback(commandMessage):
