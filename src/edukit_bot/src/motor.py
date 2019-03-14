@@ -89,15 +89,13 @@ def motor1(x):
 
 def left():
 	print("forward0="+forward0+",backward0="+backward0)
-	setSpeedByPin(EN_M1, 0)
 	motor0(forward0)
-
+	motor1(backward0)
 
 def right():
 	print("forward0=" + forward0 + ",backward0=" + backward0)
-	setSpeedByPin(EN_M0, 0)
+	motor0(backward0)
 	motor1(forward0)
-
 
 def forward():
 	motor0(forward0)
