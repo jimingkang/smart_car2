@@ -1,0 +1,8 @@
+prefix=/home/pi/smart_car/install
+
+Name: joy_teleop
+Description: Description of joy_teleop
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/pi/smart_car/install/lib 
+Requires: actionlib

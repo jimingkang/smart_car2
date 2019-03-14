@@ -1,0 +1,136 @@
+#!/usr/bin/env python
+import RPi.GPIO as GPIO
+import video_dir
+import car_dir
+import motor
+from socket import *
+from time import ctime
+import rospy
+import time
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
+
+busnum = 1 
+offset_x = 0
+offset_y = 0
+offset = 0
+forward0 = True
+forward1 = True
+
+#hall efffect on motor
+C1=19
+C2=21
+c1_count=0
+c2_count=0
+theta=500/180.0
+cnt=1000
+# How many times to turn the pin on and off each second
+Frequency = 20
+# How long the pin stays on each cycle, as a percent (here, it's 30%)
+DutyCycle = 30
+# Setting the duty cycle to 0 means the motors will not turn
+Stop = 0
+speed=20
+then=0
+nowtime=0
+# Set the GPIO to software PWM at 'Frequency' Hertz
+cmd=""
+
+# Start the software PWM with a duty cycle of 0 (i.e. not moving)
+def C1_callback(channel):
+ 	global c1_count,cnt
+	c1_count=c1_count+1
+	print("C1=",c1_count)
+	print("Cnt=", cnt)
+	if c1_count>cnt:
+		motor.stop()
+		c1_count=0
+
+
+
+def C2_callback2(channel):
+ 	global c2_count,cnt
+	c2_count=c2_count+1
+	print("C2=",c2_count)
+	if c2_count>cnt:
+		motor.stop()
+		c2_count=0
+
+
+
+def setup_interupt():
+	GPIO.setup(C1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	GPIO.setup(C2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+#	GPIO.add_event_detect(C1, GPIO.FALLING, callback=C1_callback, bouncetime=1)
+#	GPIO.add_event_detect(C2, GPIO.FALLING, callback=C2_callback2, bouncetime=1)
+def setup():
+
+	global offset_x,  offset_y, offset, forward0, forward1
+	offset_x = 0
+	offset_y = 0
+	offset = 0
+	forward0 = 'True'
+	forward1 = 'True'
+	try:
+		for line in open('config'):
+			if line[0:8] == 'offset_x':
+				offset_x = int(line[11:-1])
+				print 'offset_x =', offset_x
+			if line[0:8] == 'offset_y':
+				offset_y = int(line[11:-1])
+				print 'offset_y =', offset_y
+			if line[0:8] == 'offset =':
+				offset = int(line[9:-1])
+				print 'offset =', offset
+			if line[0:8] == "forward0":
+				forward0 = line[11:-1]
+				print 'turning0 =', forward0
+			if line[0:8] == "forward1":
+				forward1 = line[11:-1]
+				print 'turning1 =', forward1
+	except:
+		print 'no config file, set config to original'
+	video_dir.setup(busnum=busnum)
+	car_dir.setup(busnum=busnum)
+	motor.setup(busnum=busnum) 
+	video_dir.calibrate(offset_x, offset_y)
+	car_dir.calibrate(offset)
+	setup_interupt()
+
+def REVERSE(x):
+	if x == 'True':
+		return 'False'
+	elif x == 'False':
+		return 'True'
+
+
+def move(twist):
+	global  theta, cnt
+	global cmd, speed
+	if float(twist.linear.x)>0:
+		print("in x>0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
+		speedtmp=speed*float(twist.angular.x)		
+		motor.setSpeed(int(speedtmp))
+		print(speedtmp)
+		motor.forward()
+	elif float(twist.linear.x)<0:
+		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
+		speedtmp=speed*float(twist.angular.x)		
+		motor.setSpeed(int(speedtmp))
+		print(speedtmp)
+		motor.backward()
+	else:
+		motor.stop()
+def CommandCallback(commandMessage):
+	#command = commandMessage.data
+	twist = commandMessage
+	print("cnt=",cnt)
+        move(twist)
+rospy.init_node('driver')
+setup()
+
+rospy.Subscriber('/cmd_vel', Twist, CommandCallback)
+
+rospy.spin()
+print('Shutting down: stopping motors')
+GPIO.cleanup()

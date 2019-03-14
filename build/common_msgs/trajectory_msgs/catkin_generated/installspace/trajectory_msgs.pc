@@ -1,0 +1,8 @@
+prefix=/home/pi/smart_car/install
+
+Name: trajectory_msgs
+Description: Description of trajectory_msgs
+Version: 1.12.7
+Cflags: -I/home/pi/smart_car/install/include
+Libs: -L/home/pi/smart_car/install/lib 
+Requires: message_runtime std_msgs geometry_msgs

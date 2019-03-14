@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/smart_car/devel/setup.sh

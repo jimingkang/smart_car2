@@ -1,0 +1,2 @@
+beginner_tutorials:common_msgs/actionlib_msgs:common_msgs/common_msgs:common_msgs/geometry_msgs:common_msgs/sensor_msgs:edukit_bot:teleop_twist_keyboard
+-DCATKIN_DEVEL_PREFIX=/home/pi/smart_car/devel -DCMAKE_INSTALL_PREFIX=/home/pi/smart_car/install -G Unix Makefiles
