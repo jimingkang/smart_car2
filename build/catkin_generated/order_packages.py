@@ -2,4 +2,4 @@
 source_root_dir = "/home/pi/smart_car2/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/pi/smart_car/devel;/opt/ros/kinetic".split(';') if "/home/pi/smart_car/devel;/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/opt/ros/kinetic".split(';') if "/opt/ros/kinetic" != "" else []

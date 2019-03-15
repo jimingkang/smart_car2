@@ -1,0 +1,8 @@
+prefix=/home/pi/smart_car2/install
+
+Name: arm_desciption
+Description: Description of arm_desciption
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/smart_car2/install/lib 
+Requires: 

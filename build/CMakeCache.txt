@@ -272,6 +272,18 @@ actionlib_msgs_BINARY_DIR:STATIC=/home/pi/smart_car2/build/common_msgs/actionlib
 actionlib_msgs_SOURCE_DIR:STATIC=/home/pi/smart_car2/src/common_msgs/actionlib_msgs
 
 //Value Computed by CMake
+arm_BINARY_DIR:STATIC=/home/pi/smart_car2/build/arm
+
+//Value Computed by CMake
+arm_SOURCE_DIR:STATIC=/home/pi/smart_car2/src/arm
+
+//Value Computed by CMake
+arm_desciption_BINARY_DIR:STATIC=/home/pi/smart_car2/build/arm_desciption
+
+//Value Computed by CMake
+arm_desciption_SOURCE_DIR:STATIC=/home/pi/smart_car2/src/arm_desciption
+
+//Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/pi/smart_car2/build/beginner_tutorials
 
 //Value Computed by CMake
@@ -521,7 +533,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

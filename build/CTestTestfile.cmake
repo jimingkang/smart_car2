@@ -5,10 +5,11 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("arm")
+subdirs("arm_desciption")
 subdirs("common_msgs/common_msgs")
 subdirs("common_msgs/actionlib_msgs")
 subdirs("common_msgs/geometry_msgs")
 subdirs("teleop_twist_keyboard")
-subdirs("beginner_tutorials")
 subdirs("edukit_bot")
 subdirs("common_msgs/sensor_msgs")

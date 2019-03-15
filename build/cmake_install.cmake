@@ -117,11 +117,12 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/pi/smart_car2/build/gtest/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/arm/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/arm_desciption/cmake_install.cmake")
   include("/home/pi/smart_car2/build/common_msgs/common_msgs/cmake_install.cmake")
   include("/home/pi/smart_car2/build/common_msgs/actionlib_msgs/cmake_install.cmake")
   include("/home/pi/smart_car2/build/common_msgs/geometry_msgs/cmake_install.cmake")
   include("/home/pi/smart_car2/build/teleop_twist_keyboard/cmake_install.cmake")
-  include("/home/pi/smart_car2/build/beginner_tutorials/cmake_install.cmake")
   include("/home/pi/smart_car2/build/edukit_bot/cmake_install.cmake")
   include("/home/pi/smart_car2/build/common_msgs/sensor_msgs/cmake_install.cmake")
 
