@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/smart_car/src/teleop_twist_keyboard
+# Install script for directory: /home/pi/smart_car2/src/teleop_twist_keyboard
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,21 +33,21 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/smart_car/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/smart_car2/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.pc")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop_twist_keyboard/cmake" TYPE FILE FILES
-    "/home/pi/smart_car/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig.cmake"
-    "/home/pi/smart_car/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig-version.cmake"
+    "/home/pi/smart_car2/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig.cmake"
+    "/home/pi/smart_car2/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig-version.cmake"
     )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop_twist_keyboard" TYPE FILE FILES "/home/pi/smart_car/src/teleop_twist_keyboard/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop_twist_keyboard" TYPE FILE FILES "/home/pi/smart_car2/src/teleop_twist_keyboard/package.xml")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/teleop_twist_keyboard" TYPE PROGRAM FILES "/home/pi/smart_car/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/teleop_twist_keyboard" TYPE PROGRAM FILES "/home/pi/smart_car2/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.py")
 endif()
 

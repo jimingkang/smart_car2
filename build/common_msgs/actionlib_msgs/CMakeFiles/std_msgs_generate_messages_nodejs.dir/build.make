@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/smart_car/src
+CMAKE_SOURCE_DIR = /home/pi/smart_car2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/smart_car/build
+CMAKE_BINARY_DIR = /home/pi/smart_car2/build
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/buil
 .PHONY : common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 
 common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/pi/smart_car/build/common_msgs/actionlib_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/pi/smart_car2/build/common_msgs/actionlib_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/pi/smart_car/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/smart_car/src /home/pi/smart_car/src/common_msgs/actionlib_msgs /home/pi/smart_car/build /home/pi/smart_car/build/common_msgs/actionlib_msgs /home/pi/smart_car/build/common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/smart_car2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/smart_car2/src /home/pi/smart_car2/src/common_msgs/actionlib_msgs /home/pi/smart_car2/build /home/pi/smart_car2/build/common_msgs/actionlib_msgs /home/pi/smart_car2/build/common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : common_msgs/actionlib_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

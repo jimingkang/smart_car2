@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/actionlib_msgs_generate_messages_eus"
-  "/home/pi/smart_car/devel/share/roseus/ros/actionlib_msgs/msg/GoalID.l"
-  "/home/pi/smart_car/devel/share/roseus/ros/actionlib_msgs/msg/GoalStatus.l"
-  "/home/pi/smart_car/devel/share/roseus/ros/actionlib_msgs/msg/GoalStatusArray.l"
-  "/home/pi/smart_car/devel/share/roseus/ros/actionlib_msgs/manifest.l"
+  "/home/pi/smart_car2/devel/share/roseus/ros/actionlib_msgs/msg/GoalStatusArray.l"
+  "/home/pi/smart_car2/devel/share/roseus/ros/actionlib_msgs/msg/GoalStatus.l"
+  "/home/pi/smart_car2/devel/share/roseus/ros/actionlib_msgs/msg/GoalID.l"
+  "/home/pi/smart_car2/devel/share/roseus/ros/actionlib_msgs/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

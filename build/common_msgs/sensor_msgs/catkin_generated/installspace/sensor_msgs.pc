@@ -1,8 +1,8 @@
-prefix=/home/pi/smart_car/install
+prefix=/home/pi/smart_car2/install
 
 Name: sensor_msgs
 Description: Description of sensor_msgs
 Version: 1.12.7
-Cflags: -I/home/pi/smart_car/install/include
-Libs: -L/home/pi/smart_car/install/lib 
+Cflags: -I/home/pi/smart_car2/install/include
+Libs: -L/home/pi/smart_car2/install/lib 
 Requires: geometry_msgs message_runtime std_msgs

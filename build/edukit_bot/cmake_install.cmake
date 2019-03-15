@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/smart_car/src/edukit_bot
+# Install script for directory: /home/pi/smart_car2/src/edukit_bot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/smart_car/build/edukit_bot/catkin_generated/installspace/edukit_bot.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/smart_car2/build/edukit_bot/catkin_generated/installspace/edukit_bot.pc")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/edukit_bot/cmake" TYPE FILE FILES
-    "/home/pi/smart_car/build/edukit_bot/catkin_generated/installspace/edukit_botConfig.cmake"
-    "/home/pi/smart_car/build/edukit_bot/catkin_generated/installspace/edukit_botConfig-version.cmake"
+    "/home/pi/smart_car2/build/edukit_bot/catkin_generated/installspace/edukit_botConfig.cmake"
+    "/home/pi/smart_car2/build/edukit_bot/catkin_generated/installspace/edukit_botConfig-version.cmake"
     )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/edukit_bot" TYPE FILE FILES "/home/pi/smart_car/src/edukit_bot/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/edukit_bot" TYPE FILE FILES "/home/pi/smart_car2/src/edukit_bot/package.xml")
 endif()
 

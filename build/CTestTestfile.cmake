@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/pi/smart_car/src
-# Build directory: /home/pi/smart_car/build
+# Source directory: /home/pi/smart_car2/src
+# Build directory: /home/pi/smart_car2/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

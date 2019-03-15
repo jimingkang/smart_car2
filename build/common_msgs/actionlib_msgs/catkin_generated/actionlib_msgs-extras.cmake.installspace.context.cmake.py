@@ -2,7 +2,7 @@
 DEVELSPACE = 'FALSE' == 'TRUE'
 INSTALLSPACE = 'TRUE' == 'TRUE'
 
-CATKIN_DEVEL_PREFIX = '/home/pi/smart_car/devel'
+CATKIN_DEVEL_PREFIX = '/home/pi/smart_car2/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -20,14 +20,14 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = ''
 CATKIN_PACKAGE_PYTHON_DESTINATION = 'lib/python2.7/dist-packages/actionlib_msgs'
 CATKIN_PACKAGE_SHARE_DESTINATION = 'share/actionlib_msgs'
 
-CMAKE_BINARY_DIR = '/home/pi/smart_car/build'
-CMAKE_CURRENT_BINARY_DIR = '/home/pi/smart_car/build/common_msgs/actionlib_msgs'
-CMAKE_CURRENT_SOURCE_DIR = '/home/pi/smart_car/src/common_msgs/actionlib_msgs'
-CMAKE_INSTALL_PREFIX = '/home/pi/smart_car/install'
-CMAKE_SOURCE_DIR = '/home/pi/smart_car/src'
+CMAKE_BINARY_DIR = '/home/pi/smart_car2/build'
+CMAKE_CURRENT_BINARY_DIR = '/home/pi/smart_car2/build/common_msgs/actionlib_msgs'
+CMAKE_CURRENT_SOURCE_DIR = '/home/pi/smart_car2/src/common_msgs/actionlib_msgs'
+CMAKE_INSTALL_PREFIX = '/home/pi/smart_car2/install'
+CMAKE_SOURCE_DIR = '/home/pi/smart_car2/src'
 
 PKG_CMAKE_DIR = '${actionlib_msgs_DIR}'
 
 PROJECT_NAME = 'actionlib_msgs'
-PROJECT_BINARY_DIR = '/home/pi/smart_car/build/common_msgs/actionlib_msgs'
-PROJECT_SOURCE_DIR = '/home/pi/smart_car/src/common_msgs/actionlib_msgs'
+PROJECT_BINARY_DIR = '/home/pi/smart_car2/build/common_msgs/actionlib_msgs'
+PROJECT_SOURCE_DIR = '/home/pi/smart_car2/src/common_msgs/actionlib_msgs'

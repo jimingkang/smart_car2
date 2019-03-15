@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/smart_car/src
+# Install script for directory: /home/pi/smart_car2/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,86 +44,86 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/smart_car/install/_setup_util.py")
+   "/home/pi/smart_car2/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/smart_car/install" TYPE PROGRAM FILES "/home/pi/smart_car/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/pi/smart_car2/install" TYPE PROGRAM FILES "/home/pi/smart_car2/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/smart_car/install/env.sh")
+   "/home/pi/smart_car2/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/smart_car/install" TYPE PROGRAM FILES "/home/pi/smart_car/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/pi/smart_car2/install" TYPE PROGRAM FILES "/home/pi/smart_car2/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/smart_car/install/setup.bash")
+   "/home/pi/smart_car2/install/setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/smart_car/install" TYPE FILE FILES "/home/pi/smart_car/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/home/pi/smart_car2/install" TYPE FILE FILES "/home/pi/smart_car2/build/catkin_generated/installspace/setup.bash")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/smart_car/install/setup.sh")
+   "/home/pi/smart_car2/install/setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/smart_car/install" TYPE FILE FILES "/home/pi/smart_car/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/home/pi/smart_car2/install" TYPE FILE FILES "/home/pi/smart_car2/build/catkin_generated/installspace/setup.sh")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/smart_car/install/setup.zsh")
+   "/home/pi/smart_car2/install/setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/smart_car/install" TYPE FILE FILES "/home/pi/smart_car/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/home/pi/smart_car2/install" TYPE FILE FILES "/home/pi/smart_car2/build/catkin_generated/installspace/setup.zsh")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/smart_car/install/.rosinstall")
+   "/home/pi/smart_car2/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/smart_car/install" TYPE FILE FILES "/home/pi/smart_car/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/pi/smart_car2/install" TYPE FILE FILES "/home/pi/smart_car2/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/smart_car/build/gtest/cmake_install.cmake")
-  include("/home/pi/smart_car/build/common_msgs/common_msgs/cmake_install.cmake")
-  include("/home/pi/smart_car/build/common_msgs/actionlib_msgs/cmake_install.cmake")
-  include("/home/pi/smart_car/build/common_msgs/geometry_msgs/cmake_install.cmake")
-  include("/home/pi/smart_car/build/teleop_twist_keyboard/cmake_install.cmake")
-  include("/home/pi/smart_car/build/beginner_tutorials/cmake_install.cmake")
-  include("/home/pi/smart_car/build/edukit_bot/cmake_install.cmake")
-  include("/home/pi/smart_car/build/common_msgs/sensor_msgs/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/gtest/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/common_msgs/common_msgs/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/common_msgs/actionlib_msgs/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/common_msgs/geometry_msgs/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/teleop_twist_keyboard/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/beginner_tutorials/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/edukit_bot/cmake_install.cmake")
+  include("/home/pi/smart_car2/build/common_msgs/sensor_msgs/cmake_install.cmake")
 
 endif()
 
@@ -135,5 +135,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/smart_car/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/smart_car2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

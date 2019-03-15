@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/smart_car/src/beginner_tutorials
+# Install script for directory: /home/pi/smart_car2/src/beginner_tutorials
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/smart_car2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/smart_car/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorials.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/smart_car2/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorials.pc")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials/cmake" TYPE FILE FILES
-    "/home/pi/smart_car/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorialsConfig.cmake"
-    "/home/pi/smart_car/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorialsConfig-version.cmake"
+    "/home/pi/smart_car2/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorialsConfig.cmake"
+    "/home/pi/smart_car2/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorialsConfig-version.cmake"
     )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials" TYPE FILE FILES "/home/pi/smart_car/src/beginner_tutorials/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials" TYPE FILE FILES "/home/pi/smart_car2/src/beginner_tutorials/package.xml")
 endif()
 

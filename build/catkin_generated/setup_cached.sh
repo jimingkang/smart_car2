@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/pi/smart_car/build"
+export CMAKE_PREFIX_PATH="/home/pi/smart_car2/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/pi/smart_car2/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/smart_car2/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/pi/smart_car2/src:$ROS_PACKAGE_PATH"

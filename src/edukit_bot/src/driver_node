@@ -8,6 +8,7 @@ from time import ctime
 import rospy
 import time
 from std_msgs.msg import String
+from std_msgs.msg import Int16
 from geometry_msgs.msg import Twist
 
 busnum = 1 
@@ -23,7 +24,8 @@ C2=21
 c1_count=0
 c2_count=0
 theta=500/180.0
-cnt=1000
+cnt_left=500
+cnt_right=500
 # How many times to turn the pin on and off each second
 Frequency = 20
 # How long the pin stays on each cycle, as a percent (here, it's 30%)
@@ -35,34 +37,33 @@ then=0
 nowtime=0
 # Set the GPIO to software PWM at 'Frequency' Hertz
 cmd=""
-
+pub_rwheel = rospy.Publisher('rwheel_cnt',Int16 ,queue_size=10)
+pub_lwheel = rospy.Publisher('lwheel_cnt', Int16,queue_size=10)
 # Start the software PWM with a duty cycle of 0 (i.e. not moving)
 def C1_callback(channel):
  	global c1_count,cnt
 	c1_count=c1_count+1
 	print("C1=",c1_count)
-	print("Cnt=", cnt)
-	if c1_count>cnt:
-		motor.stop()
-		c1_count=0
-
+	print("Cnt left =", cnt_left)
+	pub_lwheel.publish(c1_count)
 
 
 def C2_callback2(channel):
  	global c2_count,cnt
 	c2_count=c2_count+1
 	print("C2=",c2_count)
-	if c2_count>cnt:
-		motor.stop()
-		c2_count=0
+	pub_rwheel.publish(c2_count)
+	#if c2_count>cnt:
+	#	motor.stop()
+	#	c2_count=0
 
 
 
 def setup_interupt():
 	GPIO.setup(C1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 	GPIO.setup(C2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-#	GPIO.add_event_detect(C1, GPIO.FALLING, callback=C1_callback, bouncetime=1)
-#	GPIO.add_event_detect(C2, GPIO.FALLING, callback=C2_callback2, bouncetime=1)
+	GPIO.add_event_detect(C1, GPIO.FALLING, callback=C1_callback, bouncetime=1)
+	GPIO.add_event_detect(C2, GPIO.FALLING, callback=C2_callback2, bouncetime=1)
 def setup():
 
 	global offset_x,  offset_y, offset, forward0, forward1
@@ -105,31 +106,61 @@ def REVERSE(x):
 
 
 def move(twist):
-	global  theta, cnt
+	global  theta, cnt_left,cnt_right
 	global cmd, speed
 	if float(twist.linear.x)>0:
 		print("in x>0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 		speedtmp=abs(speed*float(twist.angular.x))
-		motor.setSpeed(int(speedtmp))
+		motor.setLeftSpeed(int(speedtmp))
+		#motor.setSpeed(int(speedtmp))
+		cnt_left=int(speedtmp)
 		print(speedtmp)
 		motor.forward()
+		#motor.left()
 	elif float(twist.linear.x)<0:
 		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 		speedtmp=abs(speed*float(twist.angular.x))
-		motor.setSpeed(int(speedtmp))
+		motor.setRightSpeed(int(speedtmp))
+		#motor.setSpeed(int(speedtmp))
 		print(speedtmp)
+		cnt_right=int(speedtmp)
 		motor.backward()
+		#motor.right()
 	else:
+		global c1_count,c2_count
 		motor.stop()
+	c1_count=0
+	c2_count=0
+	#cnt=0
 def CommandCallback(commandMessage):
 	#command = commandMessage.data
 	twist = commandMessage
-	print("cnt=",cnt)
+	#print("cnt=",cnt)
         move(twist)
+def LwheelCountCallback(commandMessage):
+	#command = commandMessage
+	global cnt_left
+	command = commandMessage.data
+	left_cnt =command
+	#print("left wheel cnt=")
+	print(left_cnt)
+	if left_cnt>cnt_left:
+		motor.stop()
+def RwheelCountCallback(commandMessage):
+	command = commandMessage.data
+	global cnt_right
+	#command = commandMessage
+	right_cnt =command
+	#print("right wheel cnt=")
+	print(right_cnt)
+	if right_cnt>cnt_right:
+		motor.stop()
 rospy.init_node('driver')
 setup()
 
 rospy.Subscriber('/cmd_vel', Twist, CommandCallback)
+rospy.Subscriber('/lwheel_cnt', Int16, LwheelCountCallback)
+rospy.Subscriber('/rwheel_cnt', Int16, RwheelCountCallback)
 
 rospy.spin()
 print('Shutting down: stopping motors')
