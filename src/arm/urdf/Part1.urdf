@@ -1,0 +1,43 @@
+<robot
+  name="Part1">
+  <link
+    name="arm">
+    <inertial>
+      <origin
+        xyz="-1.3045E-18 -0.075 4.59227382683391E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.31856" />
+      <inertia
+        ixx="0.000651131519931266"
+        ixy="0"
+        ixz="0"
+        iyy="0.000107672433335014"
+        iyz="3.32761725244138E-20"
+        izz="0.000651131519931266" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm/meshes/arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm/meshes/arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
