@@ -1,5 +1,5 @@
-<robot
-  name="Part1">
+<?xml version='1.0'?>
+<robot name="arm">
   <link
     name="arm">
     <inertial>
@@ -22,7 +22,7 @@
         rpy="1.5707963267949 0 0" />
       <geometry>
         <mesh
-          filename="package://arm/meshes/arm.STL" />
+          filename="package://arm_desciption/meshes/arm.STL" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="1.5707963267949 0 0" />
       <geometry>
         <mesh
-          filename="package://arm/meshes/arm.STL" />
+          filename="package://arm_desciption/meshes/arm.STL" />
       </geometry>
     </collision>
   </link>
