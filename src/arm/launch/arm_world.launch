@@ -38,7 +38,7 @@
 
 
 
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find arm_desciption)/urdf/arm.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find arm_desciption)/urdf/arm2.xacro'"/>
 
 
 
