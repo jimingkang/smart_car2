@@ -73,6 +73,7 @@ while count<cnt:
     count=count+1
     print count
   if (StepCounter<0):
+    count = count + 1
     StepCounter = StepCount+StepDir
  
   # Wait before moving on
