@@ -30,7 +30,8 @@ Seq = [[0,0,0,1],
        [1,1,0,0],
        [1,0,0,0],
        [1,0,0,1]]
-        
+direct=1
+cnt=0
 StepCount = len(Seq)
 StepDir = 1 # Set to 1 or 2 for clockwise
             # Set to -1 or -2 for anti-clockwise
@@ -38,6 +39,12 @@ count=0
 # Read wait time from command line
 if len(sys.argv)>1:
   WaitTime = int(sys.argv[1])/float(1000)
+  cnt = int(sys.argv[2])
+  direct = int(sys.argv[3])
+  StepDir=int(direct)*StepDir
+  print "StepDir"
+  print StepDir
+
 else:
   WaitTime = 10/float(1000)
  
@@ -45,7 +52,7 @@ else:
 StepCounter = 0
  
 # Start main loop
-while True:
+while count<cnt:
   print StepCounter,
  # print Seq[StepCounter]
  

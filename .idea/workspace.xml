@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3549edb-475f-4d3b-b6ff-2135b517d9f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/arm_desciption/urdf/arm2.xacro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arm/launch/arm_world.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/arm/launch/arm_world.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arm_desciption/meshes/arm.STL" beforeDir="false" afterPath="$PROJECT_DIR$/src/arm_desciption/meshes/Part1.STL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arm_desciption/urdf/arm.xacro" beforeDir="false" afterPath="$PROJECT_DIR$/src/arm_desciption/urdf/Part1.urdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2stepper.py" beforeDir="false" afterPath="$PROJECT_DIR$/2stepper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +19,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2stepper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/arm/launch/arm_world.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="680">
               <caret line="40" column="99" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/Part1.urdf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -53,6 +68,7 @@
         <option value="$PROJECT_DIR$/src/arm_desciption/urdf/arm.xacro" />
         <option value="$PROJECT_DIR$/src/arm_desciption/urdf/Part1.urdf" />
         <option value="$PROJECT_DIR$/src/arm/launch/arm_world.launch" />
+        <option value="$PROJECT_DIR$/2stepper.py" />
       </list>
     </option>
   </component>
@@ -78,46 +94,6 @@
               <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
               <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arm" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arm" type="462c0819:PsiDirectoryNode" />
-              <item name="worlds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arm_desciption" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arm_desciption" type="462c0819:PsiDirectoryNode" />
-              <item name="meshes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arm_desciption" type="462c0819:PsiDirectoryNode" />
-              <item name="urdf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,16 +242,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/arm.xacro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arm_desciption/meshes/arm.STL">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/arm.xacro" />
+    <entry file="file://$PROJECT_DIR$/src/arm_desciption/meshes/arm.STL" />
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/driver_node">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
@@ -289,20 +257,27 @@
     <entry file="file://$PROJECT_DIR$/src/arm_desciption/meshes/Part1.STL">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/Part1.urdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/arm2.xacro">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/arm/launch/arm_world.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="680">
           <caret line="40" column="99" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/Part1.urdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2stepper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
         </state>
       </provider>
     </entry>
