@@ -39,7 +39,7 @@ def setup():
 
 # Read wait time from command line
 def move(timeStep=0,param_count=10,param_direct=1):
-    global cnt,StepDir
+    global cnt,StepDir,count
     cnt = int(param_count)
     direct = int(param_direct)
     StepDir = int(direct) * StepDir
@@ -81,3 +81,4 @@ def move(timeStep=0,param_count=10,param_direct=1):
 
       # Wait before moving on
       time.sleep(WaitTime)
+    count=0
