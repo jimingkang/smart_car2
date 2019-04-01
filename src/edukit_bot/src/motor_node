@@ -1,0 +1,109 @@
+#!/usr/bin/env python
+import RPi.GPIO as GPIO
+import video_dir
+import car_dir
+import motor
+import stepper1
+import stepper2
+
+from socket import *
+from time import ctime
+import rospy
+import time
+from std_msgs.msg import String
+from std_msgs.msg import Int16
+from geometry_msgs.msg import Twist
+
+busnum = 1 
+offset_x = 0
+offset_y = 0
+offset = 0
+forward0 = True
+forward1 = True
+
+#hall efffect on motor
+C1=19
+C2=21
+c1_count=0
+c2_count=0
+theta=500/180.0
+cnt_left=500
+cnt_right=500
+# How many times to turn the pin on and off each second
+Frequency = 20
+# How long the pin stays on each cycle, as a percent (here, it's 30%)
+DutyCycle = 30
+# Setting the duty cycle to 0 means the motors will not turn
+Stop = 0
+speed=20
+then=0
+nowtime=0
+# Set the GPIO to software PWM at 'Frequency' Hertz
+cmd=""
+#pub_rwheel = rospy.Publisher('rwheel_cnt',Int16 ,queue_size=10)
+#pub_lwheel = rospy.Publisher('lwheel_cnt', Int16,queue_size=10)
+# Start the software PWM with a duty cycle of 0 (i.e. not moving)
+
+
+def setup_interupt():
+	GPIO.setup(C1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	GPIO.setup(C2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	#GPIO.add_event_detect(C1, GPIO.FALLING, callback=C1_callback, bouncetime=1)
+	#GPIO.add_event_detect(C2, GPIO.FALLING, callback=C2_callback2, bouncetime=1)
+def setup():
+
+	global offset_x,  offset_y, offset, forward0, forward1
+	offset_x = 0
+	offset_y = 0
+	offset = 0
+	forward0 = 'True'
+	forward1 = 'True'
+	#video_dir.setup(busnum=busnum)
+	#car_dir.setup(busnum=busnum)
+	#motor.setup(busnum=busnum)
+	#video_dir.calibrate(offset_x, offset_y)
+	#car_dir.calibrate(offset)
+	#setup_interupt()
+	stepper1.setup()
+	stepper1.setup()
+
+def REVERSE(x):
+	if x == 'True':
+		return 'False'
+	elif x == 'False':
+		return 'True'
+
+
+def move(twist):
+	global  theta, cnt_left,cnt_right
+	global cmd, speed
+	if float(twist.linear.x)>0:
+		print("in x>0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
+		#speedtmp=abs(speed*float(twist.angular.x))
+		#motor.setLeftSpeed(int(speedtmp))
+		#motor.setSpeed(int(speedtmp))
+		#cnt_left=int(speedtmp)
+		#print(speedtmp)
+		stepper1.move(1,50,1)
+		stepper2.move(1, 50, 1)
+
+	elif float(twist.linear.x)<0:
+		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
+
+		stepper1.move(1,50,-1)
+	else:
+		global c1_count,c2_count
+def CommandCallback(commandMessage):
+	#command = commandMessage.data
+	twist = commandMessage
+	move(twist)
+
+rospy.init_node('driver')
+setup()
+
+rospy.Subscriber('/cmd_vel', Twist, CommandCallback)
+
+
+rospy.spin()
+print('Shutting down: stopping Steper')
+GPIO.cleanup()
