@@ -17,7 +17,7 @@ Step2Pins = [31,33,35,37]
 StepPins   =[Step1Pins,Step2Pins]
  
 # Set all pins as output
-for i in StepPins:
+for i in len(StepPins):
     for pin in StepPins[i]:
       print "Setup pins"
       GPIO.setup(pin,GPIO.OUT)
