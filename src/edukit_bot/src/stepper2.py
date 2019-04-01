@@ -25,6 +25,7 @@ StepDir = 1
 
 
 def setup():
+    global StepPins
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
     for pin in StepPins:
@@ -34,15 +35,16 @@ def setup():
 
 
 # Read wait time from command line
-def move(timeStep, param_count, param_direct):
-    if len(sys.argv) > 1:
-        WaitTime = int(timeStep) / float(1000)
-        cnt = int(param_count)
-        direct = int(param_direct)
-        StepDir = int(direct) * StepDir
-        print "StepDir"
-        print StepDir
+def move(timeStep=0, param_count=10, param_direct=1):
+    global cnt, StepDir, count
+    cnt = int(param_count)
+    direct = int(param_direct)
+    StepDir = int(direct) * StepDir
+    print "StepDir"
+    print StepDir
 
+    if timeStep > 0:
+        WaitTime = int(timeStep) / float(1000)
     else:
         WaitTime = 10 / float(1000)
 
