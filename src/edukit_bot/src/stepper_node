@@ -90,7 +90,8 @@ def move(twist):
 	elif float(twist.linear.x)<0:
 		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 
-		stepper1.move(1,50,-1)
+		stepper1.move(1,256,-1)
+		stepper2.move(1, 256, -1)
 	else:
 		global c1_count,c2_count
 def CommandCallback(commandMessage):
