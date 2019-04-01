@@ -28,8 +28,9 @@ def setup():
     global StepPins
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
+    #GPIO.cleanup()
     for pin in StepPins:
-        print "Setup pins"
+        print " stepper2  Setup pins"
         GPIO.setup(pin, GPIO.OUT)
         GPIO.output(pin, False)
 
@@ -59,7 +60,7 @@ def move(timeStep=0, param_count=10, param_direct=1):
         for pin in range(0, 4):
             xpin = StepPins[pin]
             if Seq[StepCounter][pin] != 0:
-                # print " Enable GPIO %i" %(xpin)
+                print " Enable GPIO %i" %(xpin)
                 GPIO.output(xpin, True)
             else:
                 GPIO.output(xpin, False)

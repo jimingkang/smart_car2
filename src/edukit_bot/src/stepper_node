@@ -65,7 +65,7 @@ def setup():
 	#car_dir.calibrate(offset)
 	#setup_interupt()
 	stepper1.setup()
-	stepper1.setup()
+	stepper2.setup()
 
 def REVERSE(x):
 	if x == 'True':
