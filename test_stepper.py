@@ -48,19 +48,23 @@ if len(sys.argv)>1:
   cnt = int(sys.argv[2])
   direct = int(sys.argv[3])
   StepDir=int(direct)*StepDir
-  print "StepDir"
-  print StepDir
 
 else:
   WaitTime = 10/float(1000)
  
 # Initialise variables
 StepCounter = 0
- 
+reverse=1 
 # Start main loop
 while True:
+    count=0
+    reverse=reverse+1
+    if reverse%2 ==0:
+       StepDir=(-1)*StepDir    
+    StepCounter=0
+    print StepDir
     while count<cnt:
-      print StepCounter,
+     # print StepCounter,
      # print Seq[StepCounter]
 
       for pin in range(0, 4):
@@ -80,12 +84,10 @@ while True:
       if (StepCounter>=StepCount):
         StepCounter = 0
         count=count+1
-        print count
+        #print count
       if (StepCounter<0):
         count = count + 1
         StepCounter = StepCount+StepDir
 
       # Wait before moving on
       time.sleep(WaitTime)
-    count=0
-    StepDir=-1*StepDir
