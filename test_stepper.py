@@ -59,8 +59,8 @@ reverse=1
 while True:
     count=0
     reverse=reverse+1
-    if reverse%2 ==0:
-       StepDir=(-1)*StepDir    
+    if reverse%2 == 0:
+        StepDir=(-1)*StepDir
     StepCounter=0
     print StepDir
     while count<cnt:
