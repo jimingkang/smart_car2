@@ -40,8 +40,8 @@ def move(timeStep=0, param_count=10, param_direct=1):
     global cnt, StepDir, count
     cnt = int(param_count)
     direct = int(param_direct)
-    StepDir = int(direct)
-    print "StepDir"
+    StepDir = direct
+    print "Step2 Dir"
     print StepDir
 
     if timeStep > 0:
