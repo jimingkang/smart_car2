@@ -59,7 +59,7 @@ reverse=1
 while True:
     count=0
     reverse=reverse+1
-    if reverse*3%2 == 0:
+    if reverse%3 == 0:
         StepDir=(-1)*StepDir
         print reverse
     StepCounter=0

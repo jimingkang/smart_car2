@@ -12,8 +12,8 @@ GPIO.setwarnings(False)
 # Define GPIO signals to use
 # Physical pins 11,15,16,18
 # GPIO17,GPIO22,GPIO23,GPIO24
-#StepPins = [11,12,13,15]
-StepPins = [31,33,35,37]
+StepPins = [11,12,13,15]
+#StepPins = [31,33,35,37]
 
  
 # Set all pins as output
