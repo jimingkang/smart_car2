@@ -112,6 +112,7 @@ def move(twist):
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) == 0):
 		dir_stepper1 = -1
 		stepper1.move(1, 8, dir_stepper1)
+	print("dir_stepper1 dir_stepper2:", dir_stepper1,dir_stepper2)
 
 
 

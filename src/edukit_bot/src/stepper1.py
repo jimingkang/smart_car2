@@ -32,7 +32,7 @@ def setup():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
     for pin in StepPins:
-      print "stepper2 Setup pins"
+      print "stepper1 Setup pins"
       GPIO.setup(pin,GPIO.OUT)
       GPIO.output(pin, False)
  
@@ -43,8 +43,7 @@ def move(timeStep=0,param_count=10,param_direct=1):
     cnt = int(param_count)
     direct = int(param_direct)
     StepDir = direct
-    print "Step1 Dir"
-    print StepDir
+    print "Step1 Dir", StepDir
 
     if timeStep>0:
       WaitTime = int(timeStep)/float(1000)
