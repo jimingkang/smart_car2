@@ -52,10 +52,10 @@ def move(timeStep=0,param_count=10,param_direct=1):
 
     # Initialise variables
     StepCounter = 0
-
+    print "cnt", cnt,"count",count
     # Start main loop
     while count<cnt:
-      #print StepCounter,
+      print StepCounter
      # print Seq[StepCounter]
 
       for pin in range(0, 4):
