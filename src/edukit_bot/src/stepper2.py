@@ -30,7 +30,7 @@ def setup():
     GPIO.setwarnings(False)
     #GPIO.cleanup()
     for pin in StepPins:
-        print " stepper2  Setup pins"
+        #print " stepper2  Setup pins"
         GPIO.setup(pin, GPIO.OUT)
         GPIO.output(pin, False)
 
