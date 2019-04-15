@@ -4,7 +4,7 @@ import video_dir
 import car_dir
 import motor
 import stepper1
-import stepper2
+import stepper22
 
 from socket import *
 from time import ctime
