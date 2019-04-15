@@ -65,7 +65,7 @@ def setup():
 	#car_dir.calibrate(offset)
 	#setup_interupt()
 	stepper1.setup()
-	stepper2.setup()
+	stepper22.setup()
 
 def REVERSE(x):
 	if x == 'True':
@@ -84,28 +84,28 @@ def move(twist):
 		dir_stepper1=1
 		dir_stepper2 = 1
 		stepper1.move(1, 8, dir_stepper1)
-		stepper2.move(1, 8, dir_stepper2)
+		stepper22.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper1 = -1
 		dir_stepper2 = 1
 		stepper1.move(1, 8, dir_stepper1)
-		stepper2.move(1, 8, dir_stepper2)
+		stepper22.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper1 = 1
 		dir_stepper2 = -1
 		stepper1.move(1, 8, dir_stepper1)
-		stepper2.move(1, 8, dir_stepper2)
+		stepper22.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper1 = -1
 		dir_stepper2 = -1
 		stepper1.move(1, 8, dir_stepper1)
-		stepper2.move(1, 8, dir_stepper2)
+		stepper22.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) == 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper2 = 1
-		stepper2.move(1, 8, dir_stepper2)
+		stepper22.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) == 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper2 = -1
-		stepper2.move(1, 8, dir_stepper2)
+		stepper22.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) == 0):
 		dir_stepper1 = 1
 		stepper1.move(1, 8, dir_stepper1)

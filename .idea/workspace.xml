@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3549edb-475f-4d3b-b6ff-2135b517d9f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/edukit_bot/src/stepper1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/edukit_bot/src/stepper1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edukit_bot/src/stepper22.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" beforeDir="false" afterPath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+            <state relative-caret-position="204">
+              <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -67,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="374">
+              <caret line="49" column="9" lean-forward="true" selection-end-line="82" selection-end-column="11" />
               <folding>
                 <element signature="e#46#56#0" expanded="true" />
               </folding>
@@ -82,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="77" column="23" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="27" />
               <folding>
                 <element signature="e#46#56#0" expanded="true" />
               </folding>
@@ -92,10 +93,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arm_desciption/urdf/Part1.urdf">
+        <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper22.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            <state relative-caret-position="-68">
+              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -129,8 +130,9 @@
         <option value="$PROJECT_DIR$/test_stepper.py" />
         <option value="$PROJECT_DIR$/src/teleop_twist_keyboard/teleop_twist_keyboard.py" />
         <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper2.py" />
-        <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" />
         <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper1.py" />
+        <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper22.py" />
+        <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" />
       </list>
     </option>
   </component>
@@ -191,14 +193,14 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yuan\GitHub\smart_car2\src\arm_desciption" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Yuan\GitHub\smart_car2\src\edukit_bot\src" />
       <recent name="C:\Users\Yuan\GitHub\smart_car2\src\arm_desciption\urdf" />
       <recent name="C:\Users\Yuan\GitHub\smart_car2\src\arm_desciption" />
       <recent name="C:\Users\Yuan\GitHub\smart_car2\src\arm" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Yuan\GitHub\smart_car2\src\arm_desciption" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,10 +384,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" column="9" lean-forward="true" selection-end-line="82" selection-end-column="11" />
+          <folding>
+            <element signature="e#46#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper22.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="23" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="e#46#56#0" expanded="true" />
           </folding>
@@ -394,18 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper1.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
-          <folding>
-            <element signature="e#46#56#0" expanded="true" />
-          </folding>
+          <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
         </state>
       </provider>
     </entry>
