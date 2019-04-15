@@ -81,7 +81,7 @@ def move(twist):
 	dir_stepper1=1 if twist.linear.x > 0 else -1
 	dir_stepper2 =1 if  twist.angular.z > 0 else -1
 	stepper1.move(1,50,dir_stepper1)
-	stepper2.move(1, 256, dir_stepper1)
+	stepper2.move(1, 50, dir_stepper2)
 
 def CommandCallback(commandMessage):
 	#command = commandMessage.data
