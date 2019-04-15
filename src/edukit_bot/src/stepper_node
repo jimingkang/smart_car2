@@ -77,7 +77,7 @@ def REVERSE(x):
 def move(twist):
 	global  theta, cnt_left,cnt_right
 	global cmd, speed
-	if float(twist.linear.x)>0:
+	if float(twist.linear.x)>0 & float(twist.linear.z)>0:
 		print("in x>0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 		#speedtmp=abs(speed*float(twist.angular.x))
 		#motor.setLeftSpeed(int(speedtmp))
@@ -86,10 +86,16 @@ def move(twist):
 		#print(speedtmp)
 		stepper1.move(1,50,1)
 		stepper2.move(1, 50, 1)
-
-	elif float(twist.linear.x)<0:
-		print("in x<0 move():", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
-
+	elif float(twist.linear.x) > 0 & float(twist.linear.z) < 0:
+		print("in x>0 z<0 ):", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z)
+		stepper1.move(1, 50, 1)
+		stepper2.move(1, 50, -1)
+	elif float(twist.linear.x) < 0 & float(twist.linear.z) > 0:
+		print("in x<0 z>0 :", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z)
+		stepper1.move(1, 50, -1)
+		stepper2.move(1, 50, 1)
+	if float(twist.linear.x) < 0 & float(twist.linear.z) < 0:
+		print("in x<0 z<0 :", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 		stepper1.move(1,256,-1)
 		stepper2.move(1, 256, -1)
 	else:
