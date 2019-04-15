@@ -61,8 +61,10 @@ while True:
     reverse=reverse+1
     if reverse%2 == 0:
         StepDir=(-1)*StepDir
+        print reverse
     StepCounter=0
     print StepDir
+    print cnt
     while count<cnt:
      # print StepCounter,
      # print Seq[StepCounter]
