@@ -83,23 +83,23 @@ def move(twist):
 	if ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper1=1
 		dir_stepper2 = 1
-		stepper1.move(1, 1, dir_stepper1)
-		stepper2.move(1, 1, dir_stepper2)
+		stepper1.move(1, 8, dir_stepper1)
+		stepper2.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper1 = -1
 		dir_stepper2 = 1
-		stepper1.move(1, 1, dir_stepper1)
-		stepper2.move(1, 1, dir_stepper2)
+		stepper1.move(1, 8, dir_stepper1)
+		stepper2.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper1 = 1
 		dir_stepper2 = -1
-		stepper1.move(1, 10, dir_stepper1)
-		stepper2.move(1, 10, dir_stepper2)
+		stepper1.move(1, 8, dir_stepper1)
+		stepper2.move(1, 8, dir_stepper2)
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper1 = -1
 		dir_stepper2 = -1
-		stepper1.move(1, 10, dir_stepper1)
-		stepper2.move(1, 10, dir_stepper2)
+		stepper1.move(1, 8, dir_stepper1)
+		stepper2.move(1, 8, dir_stepper2)
 
 
 
