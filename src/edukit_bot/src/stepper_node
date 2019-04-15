@@ -77,11 +77,19 @@ def REVERSE(x):
 def move(twist):
 	global  theta, cnt_left,cnt_right
 	global cmd, speed
+	dir_stepper1=0
+	dir_stepper2=0
 	print("twist x,y,x,ang-z:", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
-	dir_stepper1=1 if twist.linear.x > 0 else -1
-	dir_stepper2 =1 if  twist.angular.z > 0 else -1
-	stepper1.move(1,50,dir_stepper1)
-	stepper2.move(1, 50, dir_stepper2)
+	if (float)(twist.linear.x) > 0:
+		dir_stepper1=1
+	elif (float)(twist.linear.x) < 0:
+		dir_stepper1 = -1
+	if (float)(twist.angular.z) > 0:
+		dir_stepper2=1
+	elif (float)(twist.angular.z) < 0:
+		dir_stepper2=-1
+	stepper1.move(1,10,dir_stepper1)
+	stepper2.move(1, 10, dir_stepper2)
 
 def CommandCallback(commandMessage):
 	#command = commandMessage.data

@@ -32,7 +32,7 @@ def setup():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
     for pin in StepPins:
-      print "Setup pins"
+      print "stepper2 Setup pins"
       GPIO.setup(pin,GPIO.OUT)
       GPIO.output(pin, False)
  
