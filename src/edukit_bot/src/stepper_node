@@ -161,7 +161,7 @@ def move(twist):
 		stepper1.move(1, step, dir_stepper1)
 		step1_position = step1_position + step * dir_stepper1
 	print("dir_stepper1 dir_stepper2:", dir_stepper1,dir_stepper2)
-	homeposition=step1_position+" "+step2_position
+	homeposition=str(step1_position)+" "+str(step2_position)
 
 
 
