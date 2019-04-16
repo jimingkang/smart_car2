@@ -42,12 +42,14 @@ nowtime=0
 # Set the GPIO to software PWM at 'Frequency' Hertz
 cmd=""
 homeposition=""
+step1_position=0
+step2_position=0
 #pub_rwheel = rospy.Publisher('rwheel_cnt',Int16 ,queue_size=10)
 #pub_lwheel = rospy.Publisher('lwheel_cnt', Int16,queue_size=10)
 # Start the software PWM with a duty cycle of 0 (i.e. not moving)
-
+step=32
 def readfile():
-	newfile= "./home_position.txt"
+	newfile = "./home_position.txt"
 	if not os.path.exists(newfile):
 		f = open(newfile,'w')
 		print newfile
@@ -56,10 +58,23 @@ def readfile():
 	else:
 		print newfile + " already existed."
 		fo = open(newfile, 'wr')
-		for line in fo.readlines():  # 依次读取每行
-			line = line.strip()  # 去掉每行头尾空白
+		for line in fo.readlines():
+			line = line.strip()
 			homeposition=line
-			print "读取的数据为: ", (homeposition)
+			print "homeposition ", (homeposition)
+		fo.close()
+	return
+def writefile(position):
+	newfile = "./home_position.txt"
+	if not os.path.exists(newfile):
+		f = open(newfile,'w')
+		print newfile
+		f.close()
+		print newfile + " created."
+	else:
+		print newfile + " already existed."
+		fo = open(newfile, 'wr')
+		fo.write(position)
 		fo.close()
 	return
 def setup_interupt():
@@ -84,6 +99,7 @@ def setup():
 	stepper1.setup()
 	stepper22.setup()
 	readfile()
+	print "homeposition",homeposition
 
 def REVERSE(x):
 	if x == 'True':
@@ -95,42 +111,57 @@ def REVERSE(x):
 def move(twist):
 	global  theta, cnt_left,cnt_right
 	global cmd, speed
+	global homeposition
 	dir_stepper1=1
 	dir_stepper2=1
 	print("twist x,y,x,ang-z:", twist.linear.x, twist.linear.y,twist.linear.z,twist.angular.z)
 	if ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper1=1
 		dir_stepper2 = 1
-		stepper1.move(1, 8, dir_stepper1)
-		stepper22.move(1, 8, dir_stepper2)
+		stepper1.move(1, step, dir_stepper1)
+		stepper22.move(1, step, dir_stepper2)
+		step1_position=step1_position+step*dir_stepper2
+		step2_position = step2_position + step * dir_stepper1
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper1 = -1
 		dir_stepper2 = 1
-		stepper1.move(1, 8, dir_stepper1)
-		stepper22.move(1, 8, dir_stepper2)
+		stepper1.move(1, step, dir_stepper1)
+		stepper22.move(1, step, dir_stepper2)
+		step1_position = step1_position + step * dir_stepper2
+		step2_position = step2_position + step * dir_stepper1
 	elif  ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper1 = 1
 		dir_stepper2 = -1
-		stepper1.move(1, 8, dir_stepper1)
-		stepper22.move(1, 8, dir_stepper2)
+		stepper1.move(1, step, dir_stepper1)
+		stepper22.move(1, step, dir_stepper2)
+		step1_position = step1_position + step * dir_stepper2
+		step2_position = step2_position + step * dir_stepper1
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper1 = -1
 		dir_stepper2 = -1
-		stepper1.move(1, 8, dir_stepper1)
-		stepper22.move(1, 8, dir_stepper2)
+		stepper1.move(1, step, dir_stepper1)
+		stepper22.move(1, step, dir_stepper2)
+		step1_position = step1_position + step * dir_stepper1
+		step2_position = step2_position + step * dir_stepper2
 	elif  ((float)(twist.linear.x) == 0) & ((float)(twist.angular.z) > 0):
 		dir_stepper2 = 1
-		stepper22.move(1, 8, dir_stepper2)
+		stepper22.move(1, step, dir_stepper2)
+		step2_position = step2_position + step * dir_stepper2
 	elif  ((float)(twist.linear.x) == 0) & ((float)(twist.angular.z) < 0):
 		dir_stepper2 = -1
-		stepper22.move(1, 8, dir_stepper2)
+		stepper22.move(1, step, dir_stepper2)
+		step2_position = step2_position + step * dir_stepper2
 	elif  ((float)(twist.linear.x) > 0) & ((float)(twist.angular.z) == 0):
 		dir_stepper1 = 1
-		stepper1.move(1, 8, dir_stepper1)
+		stepper1.move(1, step, dir_stepper1)
+		step1_position = step1_position + step * dir_stepper1
+
 	elif  ((float)(twist.linear.x) < 0) & ((float)(twist.angular.z) == 0):
 		dir_stepper1 = -1
-		stepper1.move(1, 8, dir_stepper1)
+		stepper1.move(1, step, dir_stepper1)
+		step1_position = step1_position + step * dir_stepper1
 	print("dir_stepper1 dir_stepper2:", dir_stepper1,dir_stepper2)
+	homeposition=step1_position+" "+step2_position
 
 
 
@@ -147,4 +178,5 @@ rospy.Subscriber('/cmd_vel', Twist, CommandCallback)
 
 rospy.spin()
 print('Shutting down: stopping Steper')
+writefile(homeposition)
 GPIO.cleanup()

@@ -39,10 +39,10 @@ def setup():
 def move(timeStep=0, param_count=10, param_direct=1):
     global cnt, StepDir, count
     cnt = int(param_count)
-    print "Step2 cnt", cnt
+    #print "Step2 cnt", cnt
     direct = int(param_direct)
     StepDir = direct
-    print "Step2 Dir", StepDir
+    #print "Step2 Dir", StepDir
 
     if timeStep > 0:
         WaitTime = int(timeStep) / float(1000)
@@ -54,7 +54,7 @@ def move(timeStep=0, param_count=10, param_direct=1):
 
     # Start main loop
     while count < cnt:
-        print StepCounter,
+        #print StepCounter,
         # print Seq[StepCounter]
 
         for pin in range(0, 4):
