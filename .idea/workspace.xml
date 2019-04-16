@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f3549edb-475f-4d3b-b6ff-2135b517d9f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/myFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/myFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nohup.out" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" beforeDir="false" afterPath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="163" column="60" selection-start-line="163" selection-start-column="60" selection-end-line="163" selection-end-column="60" />
+            <state relative-caret-position="237">
+              <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
               <folding>
                 <element signature="e#22#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homeposition.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -34,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="272">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -80,18 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="e#46#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
               <folding>
                 <element signature="e#46#56#0" expanded="true" />
               </folding>
@@ -149,6 +145,7 @@
         <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper22.py" />
         <option value="$PROJECT_DIR$/src/testfile.py" />
         <option value="$PROJECT_DIR$/testFile.py" />
+        <option value="$PROJECT_DIR$/homeposition.txt" />
         <option value="$PROJECT_DIR$/myFile.py" />
         <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" />
       </list>
@@ -227,7 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.myFile">
+  <component name="RunManager" selected="Python tests.pytest in myFile.py">
     <configuration name="myFile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="smart_car" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -281,8 +278,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.myFile" />
         <item itemvalue="Python tests.pytest in myFile.py" />
+        <item itemvalue="Python.myFile" />
         <item itemvalue="Python tests.pytest in C:/Users/Yuan/GitHub/smart_car2/src/testfile.py" />
       </list>
     </recent_temporary>
@@ -317,6 +314,12 @@
       <configuration name="pytest in myFile.py" configurationId="tests" />
     </history-entry>
     <history-entry file="pytest_in_myFile_py - 2019.04.16 at 19h 45m 40s.xml">
+      <configuration name="pytest in myFile.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_myFile_py - 2019.04.16 at 19h 52m 28s.xml">
+      <configuration name="pytest in myFile.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_myFile_py - 2019.04.16 at 19h 52m 36s.xml">
       <configuration name="pytest in myFile.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -515,17 +518,24 @@
     <entry file="file://$PROJECT_DIR$/home_position.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/homeposition.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="163" column="60" selection-start-line="163" selection-start-column="60" selection-end-line="163" selection-end-column="60" />
+        <state relative-caret-position="237">
+          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
           <folding>
             <element signature="e#22#45#0" expanded="true" />
           </folding>
