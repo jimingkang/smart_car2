@@ -57,7 +57,7 @@ def readfile():
 		print newfile + " created."
 	else:
 		print newfile + " already existed."
-		fo = open(newfile, 'wr')
+		fo = open(newfile, 'r+')
 		line=fo.readline()
 		line = line.strip()
 		homeposition=line
