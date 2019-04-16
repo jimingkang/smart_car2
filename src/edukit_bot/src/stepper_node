@@ -49,6 +49,7 @@ step2_position=0
 # Start the software PWM with a duty cycle of 0 (i.e. not moving)
 step=32
 def readfile():
+	global homeposition
 	newfile = "./home_position.txt"
 	if not os.path.exists(newfile):
 		f = open(newfile,'w')
@@ -85,6 +86,7 @@ def setup_interupt():
 def setup():
 
 	global offset_x,  offset_y, offset, forward0, forward1
+	global homeposition
 	offset_x = 0
 	offset_y = 0
 	offset = 0

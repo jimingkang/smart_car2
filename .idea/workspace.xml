@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3549edb-475f-4d3b-b6ff-2135b517d9f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/myFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" beforeDir="false" afterPath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+            <state relative-caret-position="101">
+              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
               <folding>
                 <element signature="e#22#45#0" expanded="true" />
               </folding>
@@ -534,8 +533,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+        <state relative-caret-position="101">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding>
             <element signature="e#22#45#0" expanded="true" />
           </folding>
