@@ -40,11 +40,27 @@ then=0
 nowtime=0
 # Set the GPIO to software PWM at 'Frequency' Hertz
 cmd=""
+homeposition=""
 #pub_rwheel = rospy.Publisher('rwheel_cnt',Int16 ,queue_size=10)
 #pub_lwheel = rospy.Publisher('lwheel_cnt', Int16,queue_size=10)
 # Start the software PWM with a duty cycle of 0 (i.e. not moving)
 
-
+def readfile():
+	newfile= "./home_position.txt"
+	if not os.path.exists(newfile):
+		f = open(newfile,'w')
+		print newfile
+		f.close()
+		print newfile + " created."
+	else:
+		print newfile + " already existed."
+		fo = open(newfile, 'wr')
+		for line in fo.readlines():  # 依次读取每行
+			line = line.strip()  # 去掉每行头尾空白
+			homeposition=line
+			print "读取的数据为: ", (homeposition)
+		fo.close()
+	return
 def setup_interupt():
 	GPIO.setup(C1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 	GPIO.setup(C2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -66,6 +82,7 @@ def setup():
 	#setup_interupt()
 	stepper1.setup()
 	stepper22.setup()
+	readfile()
 
 def REVERSE(x):
 	if x == 'True':
