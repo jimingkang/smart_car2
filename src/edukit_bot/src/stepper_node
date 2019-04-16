@@ -57,12 +57,12 @@ def readfile():
 		print newfile + " created."
 	else:
 		print newfile + " already existed."
-		fo = open(newfile, 'wr')
-		for line in fo.readlines():
+		#fo = open(newfile, 'wr')
+		for line in open(newfile, 'wr'):
 			line = line.strip()
 			homeposition=line
 			print "homeposition ", (homeposition)
-		fo.close()
+		#fo.close()
 	return
 def writefile(position):
 	newfile = "./home_position.txt"
