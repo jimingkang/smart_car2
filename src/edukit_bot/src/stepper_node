@@ -103,13 +103,14 @@ def setup():
 	readfile()
 	print "homeposition:",homeposition
 	position=homeposition.split(' ', 1);
-	if position[0]>0:
+	if len(position)>1 & position[0]>0:
 		stepper1.move(1,position[0],-1)
-	else:
+	elif len(position)>1 & position[0]<0:
 		stepper1.move(1,position[0],1)
-	if position[1]>0:
+
+	if len(position)>1 & position[1]>0:
 		stepper1.move(1,position[1],-1)
-	else:
+	elif len(position)>1 & position[1]<0:
 		stepper1.move(1,position[1],1)
 
 
