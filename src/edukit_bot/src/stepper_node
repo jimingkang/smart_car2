@@ -116,7 +116,8 @@ def setup():
 	elif int(position[1])<0:
 		stepper22.move(1,-1*int(position[0]),1)
 
-	writefile("0 0")
+	homeposition ="0 0"
+	writefile(homeposition)
 
 
 def REVERSE(x):
@@ -180,6 +181,7 @@ def move(twist):
 		step1_position = step1_position + step * dir_stepper1
 	print("dir_stepper1 dir_stepper2:", dir_stepper1,dir_stepper2)
 	homeposition=str(step1_position)+" "+str(step2_position)
+	print homeposition
 
 
 
