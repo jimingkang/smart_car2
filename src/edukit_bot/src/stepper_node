@@ -106,15 +106,17 @@ def setup():
 
 	if int(position[0])>0:
 		print "position:", int(position[0])
-		stepper1.move(1,position[0],-1)
+		stepper1.move(1,int(position[0]),-1)
 	elif int(position[0])<0:
-		stepper1.move(1,position[0],1)
+		stepper1.move(1,-1*int(position[0]),1)
 
 	if int(position[1])>0:
 		print "position:", int(position[1])
-		stepper22.move(1,position[1],-1)
+		stepper22.move(1,int(position[1]),-1)
 	elif int(position[1])<0:
-		stepper22.move(1,position[1],1)
+		stepper22.move(1,-1*int(position[0]),1)
+		
+	writefile("0 0")
 
 
 def REVERSE(x):
