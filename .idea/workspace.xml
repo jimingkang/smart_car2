@@ -16,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
-              <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+              <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
               <folding>
                 <element signature="e#22#45#0" expanded="true" />
               </folding>
@@ -178,14 +178,7 @@
               <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
               <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="edukit_bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="edukit_bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common_msgs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -534,7 +527,7 @@
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
           <folding>
             <element signature="e#22#45#0" expanded="true" />
           </folding>
