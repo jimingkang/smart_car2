@@ -12,8 +12,8 @@ GPIO.setwarnings(False)
 # Define GPIO signals to use
 # Physical pins 11,15,16,18
 # GPIO17,GPIO22,GPIO23,GPIO24
-#StepPins = [11,12,13,15]
-StepPins = [31,33,35,37]
+StepPins = [11,12,13,15]
+Step2Pins = [31,33,35,37]
 
  
 # Set all pins as output
@@ -22,6 +22,10 @@ for pin in StepPins:
   GPIO.setup(pin,GPIO.OUT)
   GPIO.output(pin, False)
  
+for pin in Step2Pins:
+  print "Setup pins"
+  GPIO.setup(pin,GPIO.OUT)
+  GPIO.output(pin, False)
 # Define advanced sequence
 # as shown in manufacturers datasheet
 Seq = [[0,0,0,1],
@@ -44,39 +48,48 @@ if len(sys.argv)>1:
   cnt = int(sys.argv[2])
   direct = int(sys.argv[3])
   StepDir=int(direct)*StepDir
-  print "StepDir"
-  print StepDir
 
 else:
   WaitTime = 10/float(1000)
  
 # Initialise variables
 StepCounter = 0
- 
+reverse=1 
 # Start main loop
-while count<cnt:
-  print StepCounter,
- # print Seq[StepCounter]
- 
-  for pin in range(0, 4):
-      xpin = StepPins[pin]
-      if Seq[StepCounter][pin]!=0:
-      	#print " Enable GPIO %i" %(xpin)
-      	GPIO.output(xpin, True)
-      else:
-      	GPIO.output(xpin, False)
- 
-  StepCounter += StepDir
- 
-  # If we reach the end of the sequence
-  # start again
-  if (StepCounter>=StepCount):
-    StepCounter = 0
-    count=count+1
-    print count
-  if (StepCounter<0):
-    count = count + 1
-    StepCounter = StepCount+StepDir
- 
-  # Wait before moving on
-  time.sleep(WaitTime)
+while True:
+    count=0
+    reverse=reverse+1
+    if reverse%3 == 0:
+        StepDir=(-1)*StepDir
+        print reverse
+    StepCounter=0
+    print StepDir
+    print cnt
+    while count<cnt:
+     # print StepCounter,
+     # print Seq[StepCounter]
+
+      for pin in range(0, 4):
+          xpin = StepPins[pin]
+          x2pin = Step2Pins[pin]
+          if Seq[StepCounter][pin]!=0:
+              GPIO.output(xpin, True)
+              GPIO.output(x2pin, True)
+          else:
+              GPIO.output(xpin, False)
+              GPIO.output(x2pin, False)
+
+      StepCounter += StepDir
+
+      # If we reach the end of the sequence
+      # start again
+      if (StepCounter>=StepCount):
+        StepCounter = 0
+        count=count+1
+        #print count
+      if (StepCounter<0):
+        count = count + 1
+        StepCounter = StepCount+StepDir
+
+      # Wait before moving on
+      time.sleep(WaitTime)
