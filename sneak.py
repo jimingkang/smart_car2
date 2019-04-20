@@ -69,6 +69,7 @@ while True:
      # print StepCounter,
      # print Seq[StepCounter]
      if reverse % 2 == 0:
+      print "reverse motor 1:", reverse
       for pin in range(0, 4):
           xpin = StepPins[pin]
           #x2pin = Step2Pins[pin]
@@ -80,6 +81,7 @@ while True:
             #  GPIO.output(x2pin, False)
 
       if reverse % 3 == 0:
+          print "reverse motor 2:", reverse
           for pin in range(0, 4):
              # xpin = StepPins[pin]
               x2pin = Step2Pins[pin]
