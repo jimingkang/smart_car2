@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3549edb-475f-4d3b-b6ff-2135b517d9f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" beforeDir="false" afterPath="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sneak.py" beforeDir="false" afterPath="$PROJECT_DIR$/sneak.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,14 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="178" column="38" selection-start-line="178" selection-start-column="38" selection-end-line="178" selection-end-column="38" />
+            <state relative-caret-position="659">
+              <caret line="147" column="44" lean-forward="true" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
               <folding>
                 <element signature="e#22#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sneak.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -83,18 +93,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="e#46#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper22.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
@@ -147,6 +145,7 @@
         <option value="$PROJECT_DIR$/homeposition.txt" />
         <option value="$PROJECT_DIR$/myFile.py" />
         <option value="$PROJECT_DIR$/src/edukit_bot/src/stepper_node" />
+        <option value="$PROJECT_DIR$/sneak.py" />
       </list>
     </option>
   </component>
@@ -168,17 +167,6 @@
             <path>
               <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
               <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart_car2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smart_car2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common_msgs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -526,11 +514,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edukit_bot/src/stepper_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="178" column="38" selection-start-line="178" selection-start-column="38" selection-end-line="178" selection-end-column="38" />
+        <state relative-caret-position="659">
+          <caret line="147" column="44" lean-forward="true" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
           <folding>
             <element signature="e#22#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sneak.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
         </state>
       </provider>
     </entry>

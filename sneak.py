@@ -68,16 +68,28 @@ while True:
     while count<cnt:
      # print StepCounter,
      # print Seq[StepCounter]
-
+     if reverse % 2 == 0:
       for pin in range(0, 4):
           xpin = StepPins[pin]
-          x2pin = Step2Pins[pin]
+          #x2pin = Step2Pins[pin]
           if Seq[StepCounter][pin]!=0:
               GPIO.output(xpin, True)
-              GPIO.output(x2pin, True)
+           #   GPIO.output(x2pin, True)
           else:
               GPIO.output(xpin, False)
-              GPIO.output(x2pin, False)
+            #  GPIO.output(x2pin, False)
+
+      if reverse % 3 == 0:
+          for pin in range(0, 4):
+             # xpin = StepPins[pin]
+              x2pin = Step2Pins[pin]
+              if Seq[StepCounter][pin] != 0:
+              #    GPIO.output(xpin, True)
+                  GPIO.output(x2pin, True)
+              else:
+              #    GPIO.output(xpin, False)
+                  GPIO.output(x2pin, False)
+
 
       StepCounter += StepDir
 
