@@ -56,7 +56,10 @@ else:
 StepCounter = 0
 reverse=1 
 # Start main loop
-while True:
+cycle=20
+cycle_cnt=0;
+while cycle_cnt<cycle:
+    cycle_cnt=cycle_cnt+1
     count=0
     reverse=reverse+1
     if reverse%3 == 0:
