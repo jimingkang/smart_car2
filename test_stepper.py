@@ -56,7 +56,7 @@ else:
 StepCounter = 0
 reverse=1 
 # Start main loop
-cycle=20
+cycle=2*3
 cycle_cnt=0;
 while cycle_cnt<cycle:
     cycle_cnt=cycle_cnt+1
