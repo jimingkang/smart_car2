@@ -14,10 +14,40 @@ GPIO.setwarnings(False)
 # GPIO17,GPIO22,GPIO23,GPIO24
 StepPins = [11,12,13,15]
 Step2Pins = [31,33,35,37]
-
+def readfile():
+	global homeposition
+	newfile = "./home_position.txt"
+	if not os.path.exists(newfile):
+		f = open(newfile,'w')
+		print newfile
+		f.close()
+		print newfile + " created."
+	else:
+		print newfile + " already existed."
+		fo = open(newfile, 'r+')
+		line=fo.readline()
+		line = line.strip()
+		homeposition=line
+		print "homeposition ", (homeposition)
+		fo.close()
+	return
+def writefile(position):
+	newfile = "./home_position.txt"
+	if not os.path.exists(newfile):
+		f = open(newfile,'w')
+		print newfile
+		f.close()
+		print newfile + " created."
+	else:
+		print newfile + " already existed."
+		fo = open(newfile, 'wr')
+		fo.write(position)
+		fo.close()
+	return
  
 # Set all pins as output
 for pin in StepPins:
+
   print "Setup pins"
   GPIO.setup(pin,GPIO.OUT)
   GPIO.output(pin, False)
