@@ -67,7 +67,7 @@ while count<cnt:
  
   for pin in range(0, 4):
       xpin = StepPins[pin]
-      x2pin = StepPins[pin]
+      x2pin = Step2Pins[pin]
       if Seq[StepCounter][pin]!=0:
       	#print " Enable GPIO %i" %(xpin)
       	GPIO.output(xpin, True)
