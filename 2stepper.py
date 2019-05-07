@@ -13,7 +13,7 @@ GPIO.setwarnings(False)
 # Physical pins 11,15,16,18
 # GPIO17,GPIO22,GPIO23,GPIO24
 StepPins = [11,12,13,15]
-#StepPins = [31,33,35,37]
+Step2Pins = [31,33,35,37]
 
  
 # Set all pins as output
@@ -21,6 +21,13 @@ for pin in StepPins:
   print "Setup pins"
   GPIO.setup(pin,GPIO.OUT)
   GPIO.output(pin, False)
+
+for pin in Step2Pins:
+  print "Setup pins"
+  GPIO.setup(pin,GPIO.OUT)
+  GPIO.output(pin, False)
+
+
  
 # Define advanced sequence
 # as shown in manufacturers datasheet
@@ -60,11 +67,14 @@ while count<cnt:
  
   for pin in range(0, 4):
       xpin = StepPins[pin]
+      x2pin = StepPins[pin]
       if Seq[StepCounter][pin]!=0:
       	#print " Enable GPIO %i" %(xpin)
       	GPIO.output(xpin, True)
+        GPIO.output(x2pin, True)
       else:
       	GPIO.output(xpin, False)
+        GPIO.output(x2pin, False)
  
   StepCounter += StepDir
  
